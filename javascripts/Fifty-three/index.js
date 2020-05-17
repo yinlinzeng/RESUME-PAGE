@@ -65,8 +65,9 @@ window.onload = function () {
     // 性能优化——首次加载图片时间太久，页面进来后再进行加载
     // "https://api.dujin.org/pic/";   大福利动漫接口
     // "https://api.24bp.cn/API";   小福利动漫接口
+    // "https://api.paugram.com/wallpaper/" 福利动漫接口
     // "https://source.unsplash.com/1600x900/?color"  普通图片接口，分辨率和关键词可调
-    var imgSrcArr = ["https://api.24bp.cn/API", "https://source.unsplash.com/1600x900/?color"];
+    var imgSrcArr = ["https://api.paugram.com/wallpaper/", "https://source.unsplash.com/1600x900/?color"];
     var imgSrc = null;
     manageCookie.getCookie("fuli", function (isFuli) {
         if (isFuli === 'on') {
@@ -89,14 +90,14 @@ window.onload = function () {
     if (isPC) {
         $("#swiper-pc .s-pro-item:nth-of-type(1) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project1.jpg')")
         $("#swiper-pc .s-pro-item:nth-of-type(2) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project2.jpg')")
-        $("#swiper-pc .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project3.jpg')")
+        $("#swiper-pc .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project3.png')")
         $("#swiper-pc .s-pro-item:nth-of-type(4) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project4.png')")
         $("#swiper-pc .s-pro-item:nth-of-type(5) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project5.png')")
         $("#swiper-pc .s-pro-item:nth-of-type(6) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project6.png')")
     } else {
         $("#swiper-mobile .s-pro-item:nth-of-type(1) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project1.jpg')")
         $("#swiper-mobile .s-pro-item:nth-of-type(2) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project2.jpg')")
-        $("#swiper-mobile .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project3.jpg')")
+        $("#swiper-mobile .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project3.png')")
         $("#swiper-mobile .s-pro-item:nth-of-type(4) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project4.png')")
         $("#swiper-mobile .s-pro-item:nth-of-type(5) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project5.png')")
         $("#swiper-mobile .s-pro-item:nth-of-type(6) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project6.png')")
@@ -188,9 +189,10 @@ window.onload = function () {
 
     // audio 设置
     var audio = new Audio()
-    audio.src = "http://www.ytmp3.cn/down/32000.mp3";
+    audio.src = "http://music.163.com/song/media/outer/url?id=444803658.mp3";
     audio.loop = "loop";
-    audio.preload = "auto"
+    audio.volume = 0.3
+    audio.preload = "auto";
     $(".music-player").on("click", function () {
         if (audio.paused) {
             audio.play();
