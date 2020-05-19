@@ -88,12 +88,12 @@ window.onload = function () {
 
     // 项目图片延迟加载
     if (isPC) {
-        $("#swiper-pc .s-pro-item:nth-of-type(1) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project1.jpg')")
-        $("#swiper-pc .s-pro-item:nth-of-type(2) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project2.jpg')")
-        $("#swiper-pc .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project3.png')")
-        $("#swiper-pc .s-pro-item:nth-of-type(4) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project4.png')")
-        $("#swiper-pc .s-pro-item:nth-of-type(5) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project5.png')")
-        $("#swiper-pc .s-pro-item:nth-of-type(6) .s-pro-inner .s-pro-bg").css("background-image", "url('/resume-page/images/Fifty-three/project6.png')")
+        $("#swiper-pc .s-pro-item:nth-of-type(1) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project1.jpg')")
+        $("#swiper-pc .s-pro-item:nth-of-type(2) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project2.jpg')")
+        $("#swiper-pc .s-pro-item:nth-of-type(3) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project3.png')")
+        $("#swiper-pc .s-pro-item:nth-of-type(4) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project4.png')")
+        $("#swiper-pc .s-pro-item:nth-of-type(5) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project5.png')")
+        $("#swiper-pc .s-pro-item:nth-of-type(6) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project6.png')")
     } else {
         $("#swiper-mobile .s-pro-item:nth-of-type(1) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project1.jpg')")
         $("#swiper-mobile .s-pro-item:nth-of-type(2) .s-pro-inner .s-pro-bg").css("background-image", "url('/images/Fifty-three/project2.jpg')")
@@ -190,7 +190,7 @@ window.onload = function () {
     // audio 设置
     var audio = new Audio()
     audio.src = "http://music.163.com/song/media/outer/url?id=444803658.mp3";
-    audio.loop = "loop";
+    audio.loop = false;
     audio.volume = 0.3
     audio.preload = "auto";
     $(".music-player").on("click", function () {
